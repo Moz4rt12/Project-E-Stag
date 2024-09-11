@@ -1,13 +1,21 @@
 #include <Arduino.h>
+#include "LCD_16X2.hpp"
 
 void setup(void)
 {
-  // In here we need to input all inicializations from the project related to the main file.
+  if(LCD_Init)
+  {
+    printf("PosDebug -> The display was started properly.");
+  }
+  else
+  {
+    printf("NegDebug -> The display has failed.");
+  }
+  
 }
 
 void loop()
 {
   setup();
-  printf("Debug -> This is a test.");
-  
+  printf("InfoDebug -> This is a test.");
 }
